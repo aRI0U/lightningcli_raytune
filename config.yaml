@@ -1,0 +1,16 @@
+seed_everything: 123
+trainer:
+  max_epochs: 10
+model:
+  class_path: model.MNISTClassifier
+  init_args:
+    layer_1_size: 128
+    layer_2_size: 256
+    lr: 1e-3
+data:
+  class_path: data.MNISTDataModule
+  init_args:
+    data_dir: "/home/alain/Documents/lightning_cli_raytune/datasets"
+    batch_size: 64
+    num_workers: 8
+    pin_memory: true
